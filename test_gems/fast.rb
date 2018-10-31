@@ -7,7 +7,7 @@ class Fast
 
   def first_element_greater_than(num)
      select_result = elements.select{ |element| element > num }.first
-    #detect_result = elements.detect{ |element| element > num }
+    # detect_result = elements.detect{ |element| element > num }
   end
 end
 
@@ -15,3 +15,4 @@ fast = Fast.new
 puts "result = #{fast.first_element_greater_than(5)}"
 
 # command: fasterer fast.rb
+# command: rubocop
