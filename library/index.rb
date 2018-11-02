@@ -28,6 +28,8 @@ loop do
   case input
   when /\Ahelp\z/i
     puts 'Help:'
+  when /\Aall\z/i
+    library.all
   when /\Aexit\z/i
     break
   else puts 'Invalid command (enter \'help\' to see all options)'
