@@ -7,8 +7,11 @@ require_relative 'reader'
 class Library
   attr_accessor :books
 
-  def initialize(books = [])
+  def initialize(books = [], orders = [], readers = [], authors = [])
     @books = books
+    @orders = orders
+    @readers = readers
+    @authors = authors
   end
 
   def load(file_path = 'library/db.yaml')
