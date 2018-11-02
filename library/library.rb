@@ -45,6 +45,23 @@ class Library
   end
 
   def top_reader
-    puts "Enter the quantity of returned top readers (default value is 1):"
+    puts "Default quantity of returned top readers is 1."
+    puts "Enter the quantity of returned top readers unto #{@orders.collect{|o| o.reader}.uniq.count}:"
+    quantity = 1
+    i = gets.chomp
+    case i
+    when /\D/i
+      quantity = 1
+      puts 'Invalid quantity. Default quantity = 1 will be used.'
+    when /\d/i
+      quantity = i.to_i
+      if quantity > @orders.collect{|o| o.reader}.uniq.count
+        quantity = @orders.collect{|o| o.reader}.uniq.count
+      end
+    else
+      puts 'Default quantity = 1 will be used.'
+    end
+    puts "quantity = #{quantity}"
+    puts "Reader count = #{@orders.collect{|o| o.reader}.uniq.count}"
   end
 end
