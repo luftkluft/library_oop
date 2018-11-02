@@ -43,4 +43,7 @@ class Library
     p = @orders.collect{|o| o.book.title + ' : ' + o.reader.name + ' : ' + o.date.to_s}
     puts p
   end
+
+  def top_reader
+  end
 end
