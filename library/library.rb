@@ -45,5 +45,6 @@ class Library
   end
 
   def top_reader
+    puts "Enter the quantity of returned top readers (default value is 1):"
   end
 end

@@ -30,6 +30,8 @@ loop do
     puts 'Help:'
   when /\Aall\z/i
     library.all
+  when /\Atop_reader\z/i
+    library.top_reader
   when /\Aexit\z/i
     break
   else puts 'Invalid command (enter \'help\' to see all options)'
