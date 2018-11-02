@@ -14,6 +14,9 @@ class Library
   def load(file_path = 'library/db.yaml')
     parsed = YAML.load(File.open(file_path))
     @books = parsed[:books]
+    # @authors = parsed[:authors]
+    # @readers = parsed[:readers]
+    # @orders = parsed[:orders]
     puts 'Data loaded successfully.'
   rescue ArgumentError => e
     puts "Could not parse YAML: #{e.message}"
@@ -24,5 +27,12 @@ class Library
     puts 'Data saved successfully.'
   rescue ArgumentError => e
     puts "Could not save YAML: #{e.message}"
+  end
+
+  def all
+    puts "Books: #{@books}"
+    puts "Authors: #{@authors}"
+    puts "Readers: #{@readers}"
+    puts "Orders: #{@orders}"
   end
 end
