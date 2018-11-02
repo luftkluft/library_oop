@@ -1,10 +1,10 @@
 def seeds
   readers = [
-    Reader.new('reader_name_1', 'reader_1@mail.com', 'reader_street_1', 'reader_house_1'),
-    Reader.new('reader_name_2', 'reader_2@mail.com', 'reader_street_2', 'reader_house_2'),
-    Reader.new('reader_name_3', 'reader_3@mail.com', 'reader_street_3', 'reader_house_3'),
-    Reader.new('reader_name_4', 'reader_4@mail.com', 'reader_street_4', 'reader_house_4'),
-    Reader.new('reader_name_5', 'reader_5@mail.com', 'reader_street_5', 'reader_house_5')
+    Reader.new('r_name_1', 'r_1@mail.com', 'r_city_1', 'r_street_1', 'r_house_1'),
+    Reader.new('r_name_2', 'r_2@mail.com', 'r_city_2', 'r_street_2', 'r_house_2'),
+    Reader.new('r_name_3', 'r_3@mail.com', 'r_city_3', 'r_street_3', 'r_house_3'),
+    Reader.new('r_name_4', 'r_4@mail.com', 'r_city_4', 'r_street_4', 'r_house_4'),
+    Reader.new('r_name_5', 'r_5@mail.com', 'r_city_5', 'r_street_5', 'r_house_5')
   ]
 
   authors = [
