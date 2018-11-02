@@ -59,7 +59,14 @@ class Library
     else
       puts 'Default quantity = 1 will be used.'
     end
-    puts "quantity = #{quantity}"
-    puts "Reader count = #{@orders.collect(&:reader).uniq.count}"
+    puts "Best #{quantity} readers:"
+    readers_names = Hash.new(0)
+    @orders.collect { |o| o.reader.name }.each { |n| readers_names[n] += 1 }
+    readers_names.sort_by { |a| a[1] }.reverse_each do |n, q|
+      quantity -= 1
+      next if quantity.negative?
+
+      puts "-reader #{n} took books #{q} times"
+    end
   end
 end

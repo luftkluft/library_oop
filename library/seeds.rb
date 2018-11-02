@@ -43,6 +43,9 @@ def seeds
     Order.new(books[4], readers[2], Date.today),
     Order.new(books[4], readers[1], Date.today),
     Order.new(books[4], readers[1], Date.today),
+    Order.new(books[4], readers[0], Date.today),
+    Order.new(books[4], readers[0], Date.today),
+    Order.new(books[4], readers[0], Date.today),
     Order.new(books[4], readers[0], Date.today)
   ]
 
