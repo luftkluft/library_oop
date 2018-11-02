@@ -1,3 +1,5 @@
+require 'date'
+
 def seeds
   readers = [
     Reader.new('r_name_1', 'r_1@mail.com', 'r_city_1', 'r_street_1', 'r_house_1'),
@@ -27,21 +29,21 @@ def seeds
   ]
 
   orders = [
-    Order.new(books[0], readers[4], Time.zone.now),
-    Order.new(books[1], readers[4], Time.zone.now),
-    Order.new(books[1], readers[4], Time.zone.now),
-    Order.new(books[2], readers[4], Time.zone.now),
-    Order.new(books[2], readers[4], Time.zone.now),
-    Order.new(books[2], readers[3], Time.zone.now),
-    Order.new(books[3], readers[3], Time.zone.now),
-    Order.new(books[3], readers[3], Time.zone.now),
-    Order.new(books[3], readers[3], Time.zone.now),
-    Order.new(books[3], readers[2], Time.zone.now),
-    Order.new(books[4], readers[2], Time.zone.now),
-    Order.new(books[4], readers[2], Time.zone.now),
-    Order.new(books[4], readers[1], Time.zone.now),
-    Order.new(books[4], readers[1], Time.zone.now),
-    Order.new(books[4], readers[0], Time.zone.now)
+    Order.new(books[0], readers[4], Date.today),
+    Order.new(books[1], readers[4], Date.today),
+    Order.new(books[1], readers[4], Date.today),
+    Order.new(books[2], readers[4], Date.today),
+    Order.new(books[2], readers[4], Date.today),
+    Order.new(books[2], readers[3], Date.today),
+    Order.new(books[3], readers[3], Date.today),
+    Order.new(books[3], readers[3], Date.today),
+    Order.new(books[3], readers[3], Date.today),
+    Order.new(books[3], readers[2], Date.today),
+    Order.new(books[4], readers[2], Date.today),
+    Order.new(books[4], readers[2], Date.today),
+    Order.new(books[4], readers[1], Date.today),
+    Order.new(books[4], readers[1], Date.today),
+    Order.new(books[4], readers[0], Date.today)
   ]
 
   {
