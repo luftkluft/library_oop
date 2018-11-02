@@ -36,7 +36,9 @@ class Library
     puts "Authors:"
     p = @orders.collect{|o| o.book.author.name + ' : ' +  o.book.author.biography}.uniq
     puts p
-    # puts "Readers: #{@readers}"
+    puts "Readers:"
+    p = @orders.collect{|o| o.reader.name + ' : ' + o.reader.email}.uniq
+    puts p
     # puts "Orders: #{@orders}"
   end
 end
