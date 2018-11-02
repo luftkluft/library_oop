@@ -30,23 +30,23 @@ class Library
   end
 
   def all
-    puts "Books:"
-    p = @orders.collect{|o| o.book.title + ' : ' + o.book.author.name}.uniq
+    puts 'Books:'
+    p = @orders.collect { |o| o.book.title + ' : ' + o.book.author.name }.uniq
     puts p
-    puts "Authors:"
-    p = @orders.collect{|o| o.book.author.name + ' : ' +  o.book.author.biography}.uniq
+    puts 'Authors:'
+    p = @orders.collect { |o| o.book.author.name + ' : ' + o.book.author.biography }.uniq
     puts p
-    puts "Readers:"
-    p = @orders.collect{|o| o.reader.name + ' : ' + o.reader.email}.uniq
+    puts 'Readers:'
+    p = @orders.collect { |o| o.reader.name + ' : ' + o.reader.email }.uniq
     puts p
-    puts "Orders:"
-    p = @orders.collect{|o| o.book.title + ' : ' + o.reader.name + ' : ' + o.date.to_s}
+    puts 'Orders:'
+    p = @orders.collect { |o| o.book.title + ' : ' + o.reader.name + ' : ' + o.date.to_s }
     puts p
   end
 
   def top_reader
-    puts "Default quantity of returned top readers is 1."
-    puts "Enter the quantity of returned top readers unto #{@orders.collect{|o| o.reader}.uniq.count}:"
+    puts 'Default quantity of returned top readers is 1.'
+    puts "Enter the quantity of returned top readers unto #{@orders.collect(&:reader).uniq.count}:"
     quantity = 1
     i = gets.chomp
     case i
@@ -55,13 +55,11 @@ class Library
       puts 'Invalid quantity. Default quantity = 1 will be used.'
     when /\d/i
       quantity = i.to_i
-      if quantity > @orders.collect{|o| o.reader}.uniq.count
-        quantity = @orders.collect{|o| o.reader}.uniq.count
-      end
+      quantity = @orders.collect(&:reader).uniq.count if quantity > @orders.collect(&:reader).uniq.count
     else
       puts 'Default quantity = 1 will be used.'
     end
     puts "quantity = #{quantity}"
-    puts "Reader count = #{@orders.collect{|o| o.reader}.uniq.count}"
+    puts "Reader count = #{@orders.collect(&:reader).uniq.count}"
   end
 end
