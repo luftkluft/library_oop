@@ -1,5 +1,8 @@
 require 'yaml'
 require_relative 'book'
+require_relative 'author'
+require_relative 'order'
+require_relative 'reader'
 
 class Library
   attr_accessor :books
