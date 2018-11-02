@@ -5,7 +5,7 @@ require_relative 'order'
 require_relative 'reader'
 
 class Library
-  attr_accessor :books
+  attr_accessor :authors, :readers, :books, :orders
 
   def initialize(books = [], orders = [], readers = [], authors = [])
     @books = books
