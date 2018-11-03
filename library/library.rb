@@ -71,6 +71,7 @@ class Library
 
       puts "-reader #{n} took books #{q} times"
     end
+  end
 
   def top_book
     puts 'Default quantity of returned top books is 1.'
