@@ -120,5 +120,6 @@ class Library
     else
       puts 'Default quantity = 3 will be used.'
     end
+    puts "The topset of #{quantity} books read by #{uniq_readers_count(quantity)} readers."
   end
 end
