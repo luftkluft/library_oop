@@ -71,5 +71,22 @@ class Library
 
       puts "-reader #{n} took books #{q} times"
     end
+
+  def top_book
+    puts 'Default quantity of returned top books is 1.'
+    puts "Enter the quantity of returned top books unto #{@orders.collect(&:book).uniq.count}:"
+    quantity = 1
+    i = gets.chomp
+    case i
+    when /\D/i
+      quantity = 1
+      puts 'Invalid quantity. Default quantity = 1 will be used.'
+    when /\d/i
+      quantity = i.to_i
+      quantity = @orders.collect(&:book).uniq.count if quantity > @orders.collect(&:book).uniq.count
+    else
+      puts 'Default quantity = 1 will be used.'
+    end
+    puts "Best #{quantity} books:"
   end
 end
