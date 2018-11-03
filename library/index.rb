@@ -34,6 +34,8 @@ loop do
     library.top_reader
   when /\Atop_book\z/i
     library.top_book
+  when /\Abest_bookset\z/i
+    library.best_bookset
   when /\Aexit\z/i
     break
   else puts 'Invalid command (enter \'help\' to see all options)'
