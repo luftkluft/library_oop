@@ -98,4 +98,8 @@ class Library
       puts "-book #{n} took #{q} times"
     end
   end
+
+  def best_bookset
+    
+  end
 end
