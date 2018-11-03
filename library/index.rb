@@ -32,6 +32,8 @@ loop do
     library.all
   when /\Atop_reader\z/i
     library.top_reader
+  when /\Atop_book\z/i
+    library.top_book
   when /\Aexit\z/i
     break
   else puts 'Invalid command (enter \'help\' to see all options)'
