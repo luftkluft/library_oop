@@ -99,6 +99,12 @@ class Library
     end
   end
 
+  def uniq_readers_count(quantity)
+    @orders.group_by(&:book).sort_by { |_book, order| order.count }
+           .reverse.first(quantity).collect { |_book, order| order }
+           .flatten.collect(&:reader).uniq.count
+  end
+
   def top_set
     puts 'Default quantity of returned top bookset is 3.'
     puts "Enter the quantity of returned top bookset unto #{@orders.collect(&:book).uniq.count}:"
