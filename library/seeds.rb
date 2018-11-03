@@ -30,7 +30,7 @@ def seeds
 
   orders = [
     Order.new(books[0], readers[4], Date.today),
-    Order.new(books[1], readers[4], Date.today),
+    Order.new(books[5], readers[4], Date.today),
     Order.new(books[1], readers[4], Date.today),
     Order.new(books[2], readers[4], Date.today),
     Order.new(books[2], readers[4], Date.today),
