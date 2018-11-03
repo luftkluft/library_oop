@@ -100,6 +100,20 @@ class Library
   end
 
   def best_bookset
-    
+    puts 'Default quantity of returned top bookset is 3.'
+    puts "Enter the quantity of returned top bookset unto #{@orders.collect(&:book).uniq.count}:"
+    quantity = 3
+    i = gets.chomp
+    case i
+    when /\D/i
+      quantity = 3
+      puts 'Invalid quantity. Default quantity = 3 will be used.'
+    when /\d/i
+      quantity = i.to_i
+      quantity = @orders.collect(&:book).uniq.count if quantity > @orders.collect(&:book).uniq.count
+    else
+      puts 'Default quantity = 3 will be used.'
+    end
+    puts "Top #{quantity} bookset:"
   end
 end
