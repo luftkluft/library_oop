@@ -89,5 +89,13 @@ class Library
       puts 'Default quantity = 1 will be used.'
     end
     puts "Best #{quantity} books:"
+    books_titles = Hash.new(0)
+    @orders.collect { |o| o.book.title }.each { |n| books_titles[n] += 1 }
+    books_titles.sort_by { |a| a[1] }.reverse_each do |n, q|
+      quantity -= 1
+      next if quantity.negative?
+
+      puts "-book #{n} took #{q} times"
+    end
   end
 end
