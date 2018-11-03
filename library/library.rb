@@ -99,7 +99,7 @@ class Library
     end
   end
 
-  def best_bookset
+  def top_set
     puts 'Default quantity of returned top bookset is 3.'
     puts "Enter the quantity of returned top bookset unto #{@orders.collect(&:book).uniq.count}:"
     quantity = 3
@@ -114,6 +114,5 @@ class Library
     else
       puts 'Default quantity = 3 will be used.'
     end
-    puts "Top #{quantity} bookset:"
   end
 end
