@@ -146,6 +146,8 @@ class Library
   end
 
   def check_book_title?(_title)
-    false
+    @compare_title = false
+    @orders.collect { |o| @compare_title = true if o.book.title == _title.to_s }
+    @compare_title
   end
 end
