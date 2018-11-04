@@ -135,6 +135,18 @@ class Library
     else
       puts i + ' not found'
     end
+
+    puts ''
+    puts 'step 3: enter name of reader from readerlist'
+    puts 'Readers:'
+    p = @orders.collect { |o| o.reader.name + ' : ' + o.reader.email }.uniq
+    puts p
+    i = gets.chomp
+    if check_reader_name?(i)
+    puts i
+    else
+      puts i + ' not found'
+    end
   end
 
   private
@@ -149,5 +161,11 @@ class Library
     @compare_title = false
     @orders.collect { |o| @compare_title = true if o.book.title == _title.to_s }
     @compare_title
+  end
+
+  def check_reader_name?(_name)
+    @compare_reader = false
+    @orders.collect { |o| @compare_reader = true if o.reader.name == _name.to_s }
+    @compare_reader
   end
 end
