@@ -36,6 +36,8 @@ loop do
     library.top_book
   when /\Atop_set\z/i
     library.top_set
+  when /\Aadd_order\z/i
+    library.add_order
   when /\Asave\z/i
     library.save(library)
   when /\Aexit\z/i
