@@ -117,6 +117,12 @@ class Library
     puts "The topset of #{quantity} books read by #{uniq_readers_count(quantity)} readers."
   end
 
+  def add_order
+    puts "Start adding order:"
+    puts "step 1: view library"
+    self.all
+  end
+
   private
 
   def uniq_readers_count(quantity)
