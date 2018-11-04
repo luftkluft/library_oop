@@ -133,6 +133,7 @@ class Library
       @order_book_title = i.to_s
     else
       puts i.to_s + ' not found'
+      @order_book_title = nil
     end
 
     puts ''
@@ -145,13 +146,20 @@ class Library
       @order_reader_name = i.to_s
     else
       puts i.to_s + ' not found'
+      @order_reader_name = nil
     end
 
     puts ''
     puts 'step 4: check order'
+    @order_date = Date.today.to_s
     puts 'Date of order: ' + Date.today.to_s
-    puts 'Reader name: ' + @order_reader_name
-    puts 'Book title: ' + @order_book_title
+    puts 'Reader name: ' + @order_reader_name if @order_reader_name
+    puts 'Book title: ' + @order_book_title if @order_book_title
+    if  @order_book_title && @order_reader_name && @order_date
+      create_order(@order_book_title, @order_reader_name, @order_date)
+    else
+      puts 'Invalid  data: unable create order.'
+    end
   end
 
   private
@@ -172,5 +180,9 @@ class Library
     @compare_reader = false
     @orders.collect { |o| @compare_reader = true if o.reader.name == _name.to_s }
     @compare_reader
+  end
+
+  def create_order(_title, _reader, _date)
+    puts 'dump'
   end
 end
