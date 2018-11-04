@@ -120,7 +120,6 @@ class Library
   def add_order
     puts ''
     puts 'Start adding order:'
-    puts 'Now date: ' + Date.today.to_s
     puts 'step 1: view library'
     self.all
 
@@ -131,9 +130,9 @@ class Library
     puts p
     i = gets.chomp
     if check_book_title?(i)
-    puts i
+      @order_book_title = i.to_s
     else
-      puts i + ' not found'
+      puts i.to_s + ' not found'
     end
 
     puts ''
@@ -143,10 +142,16 @@ class Library
     puts p
     i = gets.chomp
     if check_reader_name?(i)
-    puts i
+      @order_reader_name = i.to_s
     else
-      puts i + ' not found'
+      puts i.to_s + ' not found'
     end
+
+    puts ''
+    puts 'step 4: check order'
+    puts 'Date of order: ' + Date.today.to_s
+    puts 'Reader name: ' + @order_reader_name
+    puts 'Book title: ' + @order_book_title
   end
 
   private
