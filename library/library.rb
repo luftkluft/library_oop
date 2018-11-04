@@ -151,7 +151,7 @@ class Library
 
     puts ''
     puts 'step 4: check order'
-    @order_date = Date.today.to_s
+    @order_date = Date.today
     puts 'Date of order: ' + Date.today.to_s
     puts 'Reader name: ' + @order_reader_name if @order_reader_name
     puts 'Book title: ' + @order_book_title if @order_book_title
@@ -183,6 +183,15 @@ class Library
   end
 
   def create_order(_title, _reader, _date)
-    puts 'dump'
+    begin
+      title_index = 4
+      reader_index = 4
+      new_order = Order.new(books[title_index], readers[reader_index], _date)
+      file_path = 'library/db.yaml'
+      File.open(file_path, 'a') { |f| f.write(new_order.to_yaml) }
+      puts 'Order saved successfully.'
+    rescue ArgumentError => e
+      puts "Could not save YAML: #{e.message}"
+    end
   end
 end
