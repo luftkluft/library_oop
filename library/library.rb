@@ -121,13 +121,12 @@ class Library
     puts ''
     puts 'Start adding order:'
     puts 'step 1: view library'
-    self.all
+    all
 
     puts ''
     puts 'step 2: enter title from booklist'
     puts 'Books:'
-    p = @orders.collect { |o| o.book.title + ' : ' + o.book.author.name }.uniq
-    puts p
+    @books.collect { |b| puts b.title.to_s }
     i = gets.chomp
     if check_book_title?(i)
       @order_book_title = i.to_s
@@ -139,8 +138,7 @@ class Library
     puts ''
     puts 'step 3: enter name of reader from readerlist'
     puts 'Readers:'
-    p = @orders.collect { |o| o.reader.name + ' : ' + o.reader.email }.uniq
-    puts p
+    @readers.collect { |r| puts r.name.to_s }
     i = gets.chomp
     if check_reader_name?(i)
       @order_reader_name = i.to_s
@@ -155,7 +153,7 @@ class Library
     puts 'Date of order: ' + Date.today.to_s
     puts 'Reader name: ' + @order_reader_name if @order_reader_name
     puts 'Book title: ' + @order_book_title if @order_book_title
-    if  @order_book_title && @order_reader_name && @order_date
+    if @order_book_title && @order_reader_name && @order_date
       create_order(@order_book_title, @order_reader_name, @order_date)
     else
       puts 'Invalid  data: unable create order.'
@@ -170,28 +168,26 @@ class Library
            .flatten.collect(&:reader).uniq.count
   end
 
-  def check_book_title?(_title)
+  def check_book_title?(title)
     @compare_title = false
-    @orders.collect { |o| @compare_title = true if o.book.title == _title.to_s }
+    @orders.collect { |o| @compare_title = true if o.book.title == title.to_s }
     @compare_title
   end
 
-  def check_reader_name?(_name)
+  def check_reader_name?(name)
     @compare_reader = false
-    @orders.collect { |o| @compare_reader = true if o.reader.name == _name.to_s }
+    @orders.collect { |o| @compare_reader = true if o.reader.name == name.to_s }
     @compare_reader
   end
 
-  def create_order(_title, _reader, _date)
-    begin
-      title_index = 4
-      reader_index = 4
-      new_order = Order.new(books[title_index], readers[reader_index], _date)
-      file_path = 'library/db.yaml'
-      File.open(file_path, 'a') { |f| f.write(new_order.to_yaml) }
-      puts 'Order saved successfully.'
-    rescue ArgumentError => e
-      puts "Could not save YAML: #{e.message}"
-    end
+  def create_order(_title, _reader, _data)
+    title_index = 4
+    reader_index = 4
+    new_order = Order.new(books[title_index], readers[reader_index], _date)
+    file_path = 'library/db.yaml'
+    File.open(file_path, 'a') { |f| f.write(new_order.to_yaml) }
+    puts 'Order saved successfully.'
+  rescue ArgumentError => e
+    puts "Could not save YAML: #{e.message}"
   end
 end
