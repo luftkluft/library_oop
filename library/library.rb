@@ -118,9 +118,23 @@ class Library
   end
 
   def add_order
-    puts "Start adding order:"
-    puts "step 1: view library"
+    puts ''
+    puts 'Start adding order:'
+    puts 'Now date: ' + Date.today.to_s
+    puts 'step 1: view library'
     self.all
+
+    puts ''
+    puts 'step 2: enter title from booklist'
+    puts 'Books:'
+    p = @orders.collect { |o| o.book.title + ' : ' + o.book.author.name }.uniq
+    puts p
+    i = gets.chomp
+    if check_book_title?(i)
+    puts i
+    else
+      puts i + ' not found'
+    end
   end
 
   private
@@ -129,5 +143,9 @@ class Library
     @orders.group_by(&:book).sort_by { |_book, order| order.count }
            .reverse.first(quantity).collect { |_book, order| order }
            .flatten.collect(&:reader).uniq.count
+  end
+
+  def check_book_title?(_title)
+    false
   end
 end
