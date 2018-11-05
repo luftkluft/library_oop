@@ -43,6 +43,6 @@ loop do
     library.save(library)
   when /\Aexit\z/i
     break
-  else puts 'Invalid command (enter \'help\' to see all options)'
+  else puts 'Invalid command (enter \'help\' to see all options).'
   end
 end
