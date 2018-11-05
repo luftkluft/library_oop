@@ -23,7 +23,7 @@ puts 'Welcome to Library'
 puts 'Enter \'help\' to see all available options'
 
 loop do
-  puts '= Main menu ='
+  puts '= Enter command ='
   input = gets.chomp
 
   case input

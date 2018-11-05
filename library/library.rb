@@ -127,6 +127,7 @@ class Library
     puts 'step 2/4: enter title from booklist'
     puts 'Books:'
     @books.collect { |b| puts b.title.to_s }
+    puts '= Enter title of book ='
     i = gets.chomp
     if check_book_title?(i)
       @order_book_title = i.to_s
@@ -139,6 +140,7 @@ class Library
     puts 'step 3/4: enter name of reader from readerlist'
     puts 'Readers:'
     @readers.collect { |r| puts r.name.to_s }
+    puts '= Enter name of reader ='
     i = gets.chomp
     if check_reader_name?(i)
       @order_reader_name = i.to_s
@@ -194,12 +196,30 @@ class Library
     end
 
     new_order = Order.new(books[@title_index], readers[@reader_index], data)
-
     file_path = 'library/db.yaml'
-    File.open(file_path, 'a') { |f| f.write(new_order.to_yaml) }
+    File.open(file_path, 'a') { |f| f.write(yaml_adapter_to_add(new_order)) }
     puts 'Order saved successfully.'
-    # do update code
+    load
   rescue ArgumentError => e
     puts "Could not save YAML: #{e.message}"
+  end
+
+  def yaml_adapter_to_add(data)
+    data = data.to_yaml
+    line_count = 0
+    temp = ""
+    data.lines.each do |line|
+      if line_count == 0
+        temp << "- !ruby/object:Order\n"
+        line_count += 1
+      else
+        temp << "  "
+        temp << line
+        line_count += 1
+      end
+    end
+    temp
+  rescue ArgumentError => e
+    puts "Failed to adapt data: #{e.message}"
   end
 end
