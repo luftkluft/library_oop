@@ -1,6 +1,6 @@
 module Private
   private
-  
+
   def uniq_readers_count(quantity)
     @orders.group_by(&:book).sort_by { |_book, order| order.count }
            .reverse.first(quantity).collect { |_book, order| order }

@@ -3,7 +3,7 @@
 *                                                         *
 * Used commands:                                          *
 *                                                         *
-* all - displays lists of book orders, authors, readers   *
+* all - displays lists of books, authors, readers         *
 *       and the orders themselves; also shows the orders  *
 *       created by the user.                              *
 *                                                         *
