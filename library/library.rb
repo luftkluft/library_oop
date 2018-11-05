@@ -120,11 +120,11 @@ class Library
   def add_order
     puts ''
     puts 'Start adding order:'
-    puts 'step 1: view library'
+    puts 'step 1/4: view library'
     all
 
     puts ''
-    puts 'step 2: enter title from booklist'
+    puts 'step 2/4: enter title from booklist'
     puts 'Books:'
     @books.collect { |b| puts b.title.to_s }
     i = gets.chomp
@@ -136,7 +136,7 @@ class Library
     end
 
     puts ''
-    puts 'step 3: enter name of reader from readerlist'
+    puts 'step 3/4: enter name of reader from readerlist'
     puts 'Readers:'
     @readers.collect { |r| puts r.name.to_s }
     i = gets.chomp
@@ -148,7 +148,7 @@ class Library
     end
 
     puts ''
-    puts 'step 4: check order'
+    puts 'step 4/4: create order'
     @order_date = Date.today
     puts 'Date of order: ' + Date.today.to_s
     puts 'Reader name: ' + @order_reader_name if @order_reader_name
@@ -170,23 +170,35 @@ class Library
 
   def check_book_title?(title)
     @compare_title = false
-    @orders.collect { |o| @compare_title = true if o.book.title == title.to_s }
+    @books.collect { |b| @compare_title = true if b.title == title.to_s }
     @compare_title
   end
 
   def check_reader_name?(name)
     @compare_reader = false
-    @orders.collect { |o| @compare_reader = true if o.reader.name == name.to_s }
+    @readers.collect { |r| @compare_reader = true if r.name == name.to_s }
     @compare_reader
   end
 
-  def create_order(_title, _reader, _data)
-    title_index = 4
-    reader_index = 4
-    new_order = Order.new(books[title_index], readers[reader_index], _date)
+  def create_order(title, reader, data)
+    @index_array = 0
+    @books.collect do |b|
+      @title_index = @index_array if b.title == title.to_s
+      @index_array += 1
+    end
+
+    @index_array = 0
+    @readers.collect do |r|
+      @reader_index = @index_array if r.name == reader.to_s
+      @index_array += 1
+    end
+
+    new_order = Order.new(books[@title_index], readers[@reader_index], data)
+
     file_path = 'library/db.yaml'
     File.open(file_path, 'a') { |f| f.write(new_order.to_yaml) }
     puts 'Order saved successfully.'
+    # do update code
   rescue ArgumentError => e
     puts "Could not save YAML: #{e.message}"
   end
