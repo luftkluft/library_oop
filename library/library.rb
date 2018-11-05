@@ -162,6 +162,15 @@ class Library
     end
   end
 
+  def help
+    f = File.open('library/help.txt', 'r')
+    f.each do |line|
+      puts line
+    end
+  rescue ArgumentError => e
+    puts "Could not load HELP: #{e.message}"
+  end
+
   private
 
   def uniq_readers_count(quantity)
@@ -209,14 +218,13 @@ class Library
     line_count = 0
     temp = ""
     data.lines.each do |line|
-      if line_count == 0
+      if line_count.zero?
         temp << "- !ruby/object:Order\n"
-        line_count += 1
       else
-        temp << "  "
+        temp << '  '
         temp << line
-        line_count += 1
       end
+      line_count += 1
     end
     temp
   rescue ArgumentError => e

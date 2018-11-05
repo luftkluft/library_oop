@@ -28,7 +28,7 @@ loop do
 
   case input
   when /\Ahelp\z/i
-    puts 'Help:'
+    library.help
   when /\Aall\z/i
     library.all
   when /\Atop_reader\z/i
