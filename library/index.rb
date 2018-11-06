@@ -39,8 +39,6 @@ loop do
     library.top_set
   when /\Aadd_order\z/i
     library.add_order
-  when /\Asave\z/i
-    library.save(library)
   when /\Aexit\z/i
     break
   else puts 'Invalid command (enter \'help\' to see all options).'
