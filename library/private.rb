@@ -33,8 +33,7 @@ module Private
     end
 
     new_order = Order.new(books[@title_index], readers[@reader_index], data)
-    file_path = 'library/db.yaml'
-    File.open(file_path, 'a') { |f| f.write(yaml_adapter_to_add(new_order)) }
+    File.open(INDEX_PATH, 'a') { |f| f.write(yaml_adapter_to_add(new_order)) }
     puts 'Order saved successfully.'
     load
   rescue ArgumentError => e
@@ -44,7 +43,7 @@ module Private
   def yaml_adapter_to_add(data)
     data = data.to_yaml
     line_count = 0
-    temp = ""
+    temp = temp.to_s
     data.lines.each do |line|
       if line_count.zero?
         temp << "- !ruby/object:Order\n"

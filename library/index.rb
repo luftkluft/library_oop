@@ -3,7 +3,7 @@ require_relative 'seeds'
 
 library = Library.new
 
-unless File.exist?('library/db.yaml')
+unless File.exist?(INDEX_PATH)
   print 'Data are sown...'
   sleep(1)
   print '.'

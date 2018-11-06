@@ -1,4 +1,5 @@
 require 'yaml'
+require_relative 'const'
 require_relative 'book'
 require_relative 'author'
 require_relative 'order'

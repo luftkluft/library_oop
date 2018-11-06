@@ -1,6 +1,6 @@
 module Public
-  def load(file_path = 'library/db.yaml')
-    parsed = YAML.load(File.open(file_path))
+  def load(data_path = INDEX_PATH)
+    parsed = YAML.load(File.open(data_path))
     @books = parsed[:books]
     @authors = parsed[:authors]
     @readers = parsed[:readers]
@@ -10,8 +10,8 @@ module Public
     puts "Could not parse YAML: #{e.message}"
   end
 
-  def save(data, file_path = 'library/db.yaml')
-    File.open(file_path, 'w') { |f| f.write(data.to_yaml) }
+  def save(data, data_path = INDEX_PATH)
+    File.open(data_path, 'w') { |f| f.write(data.to_yaml) }
     puts 'Data saved successfully.'
   rescue ArgumentError => e
     puts "Could not save YAML: #{e.message}"
@@ -148,7 +148,7 @@ module Public
   end
 
   def help
-    f = File.open('library/help.txt', 'r')
+    f = File.open(HELP_PATH, 'r')
     f.each do |line|
       puts line
     end

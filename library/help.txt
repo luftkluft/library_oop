@@ -25,6 +25,6 @@
 * add_order - launches its own order creation wizard.     *
 *                                                         *
 * If the first time there is no database of the library,  *
-* then the default database will be loaded.               *
+* then the default database will be loaded from seeds.rb. *
 *                                                         *
 ***********************************************************
