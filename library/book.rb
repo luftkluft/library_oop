@@ -1,9 +1,9 @@
 class Book
   attr_reader :title, :author
 
-  def initialize(args_hash)
-    @title = title[:title]
-    @author = author[:author]
+  def initialize(title, author)
+    @title = title
+    @author = author
   end
 
   def to_s
