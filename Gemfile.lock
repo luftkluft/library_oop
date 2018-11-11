@@ -7,6 +7,7 @@ GEM
     fasterer (0.4.1)
       colorize (~> 0.7)
       ruby_parser (~> 3.11.0)
+    ffaker (2.10.0)
     jaro_winkler (1.5.1)
     parallel (1.12.1)
     parser (2.5.3.0)
@@ -45,6 +46,7 @@ PLATFORMS
 
 DEPENDENCIES
   fasterer
+  ffaker
   rspec
   rubocop
 
