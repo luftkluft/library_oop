@@ -118,7 +118,7 @@ class Library
     @orders.group_by(&:reader).each do |reader, book|
       readers_names.store(reader.name, book.count)
     end
-    readers_names.sort_by.sort_by { |_, value| -value }.first(quantity).each do |name, count|
+    readers_names.sort_by { |_, value| -value }.first(quantity).each do |name, count|
       puts "Reader #{name} took #{count} books."
     end
   end
