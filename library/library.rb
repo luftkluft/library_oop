@@ -14,7 +14,16 @@ class Library
     puts "Could not parse YAML: #{e.message}"
   end
 
+  def default_statistic
+    puts '=Default statistic='
+    puts 'A top reader is the one that takes the most number of books:'
+    top_reader(1)
+    puts ''
+  end
+
   private
+
+
 
   def validation_string(string)
     return nil unless string.is_a?(String)

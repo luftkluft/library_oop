@@ -5,6 +5,7 @@ require_relative 'autoload'
 generator = Generator.new
 generator.generate
 library = Library.new
+library.default_statistic
 
 puts 'Welcome to Library'
 puts 'Enter \'help\' to see all available options'
