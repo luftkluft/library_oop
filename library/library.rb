@@ -11,4 +11,12 @@ class Library
   rescue StandardError => e
     puts "Could not parse YAML: #{e.message}"
   end
+
+  private
+
+  def validation_string(string)
+    return nil unless string.is_a?(String)
+    return nil if string.empty?
+    string
+  end
 end
