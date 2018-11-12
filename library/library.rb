@@ -83,6 +83,15 @@ class Library
     puts ''
   end
 
+  def help
+    f = File.open(HELP_PATH, 'r')
+    f.each do |line|
+      puts line
+    end
+  rescue StandardError => e
+    puts "Could not load HELP: #{e.message}"
+  end
+
   private
 
   def top_set(quantity)
