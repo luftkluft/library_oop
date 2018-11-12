@@ -22,16 +22,27 @@ class Library
     puts 'The most popular book is the book that was taken by readers the most times:'
     top_book(1)
     puts ''
+    puts 'The number of readers that take one of the SOME_QUANTITY (top set of books)'
+    puts 'most popular books; the user is counted once, without repetitions:'
+    top_set(3)
+    puts ''
   end
 
   private
+
+  def top_set(quantity)
+    uniq_readers_count = @orders.group_by(&:book).sort_by { |_, order| -order.count }
+    .first(quantity).collect { |_, order| order }
+    .flatten.collect(&:reader).uniq.count
+    puts "The topset of #{quantity} books read by #{uniq_readers_count} readers."
+  end
 
   def top_book(quantity)
     book_titles = Hash.new(0)
     @orders.group_by(&:book).each do |book, reader|
       book_titles.store(book.title, reader.count)
     end
-    book_titles.sort_by.sort_by{|key,value| -value}.first(quantity).each do
+    book_titles.sort_by{|key,value| -value}.first(quantity).each do
       |title, count| puts "Book '#{title}' took #{count} times."
     end
   end
