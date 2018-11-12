@@ -1,8 +1,14 @@
+# frozen_string_literal: true
+
 class Book
-  attr_accessor :title, :author
+  attr_reader :title, :author
 
   def initialize(title, author)
     @title = title
     @author = author
+  end
+
+  def to_s
+    "Author: #{@author}.\nTitle: #{@title}."
   end
 end
