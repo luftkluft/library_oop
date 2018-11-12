@@ -19,9 +19,22 @@ class Library
     puts 'A top reader is the one that takes the most number of books:'
     top_reader(1)
     puts ''
+    puts 'The most popular book is the book that was taken by readers the most times:'
+    top_book(1)
+    puts ''
   end
 
   private
+
+  def top_book(quantity)
+    book_titles = Hash.new(0)
+    @orders.group_by(&:book).each do |book, reader|
+      book_titles.store(book.title, reader.count)
+    end
+    book_titles.sort_by.sort_by{|key,value| -value}.first(quantity).each do
+      |title, count| puts "Book '#{title}' took #{count} times."
+    end
+  end
 
   def top_reader(quantity)
     readers_names = Hash.new(0)
