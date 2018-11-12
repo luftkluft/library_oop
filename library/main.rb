@@ -13,10 +13,11 @@ puts 'Enter \'help\' to see all available options'
 loop do
   puts '= Enter command ='
   input = gets.chomp
-
   case input
   when /\Ahelp\z/i
     library.help
+  when /\Aus\z/i
+    library.user_statistic
   when /\Aexit\z/i
     break
   else puts 'Invalid command (enter \'help\' to see all options).'

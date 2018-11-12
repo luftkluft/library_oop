@@ -28,6 +28,61 @@ class Library
     puts ''
   end
 
+  def user_statistic
+    puts 'User statistics: step 1/3:'
+    puts "Enter quantity a top of #{@orders.collect(&:reader).uniq.count} readers are any that takes the most number of books:"
+    input = gets.chomp
+    case input
+    when /\D/i
+      quantity = 1
+      puts 'Invalid quantity. Quantity = 1 will be used.'
+    when /\d/i
+      quantity = input.to_i
+      quantity = @orders.collect(&:reader).uniq.count if quantity > @orders.collect(&:reader).uniq.count
+    else
+      quantity = 1
+      puts 'Invalid quantity. Quantity = 1 will be used.'
+    end
+    top_reader(quantity)
+    puts ''
+
+    puts 'User statistics: step 2/3:'
+    puts "Enter quantity a top of #{@orders.collect(&:book).uniq.count} books that was taken by readers the most times:"
+    input = gets.chomp
+    case input
+    when /\D/i
+      quantity = 1
+      puts 'Invalid quantity. Quantity = 1 will be used.'
+    when /\d/i
+      quantity = input.to_i
+      quantity = @orders.collect(&:book).uniq.count if quantity > @orders.collect(&:book).uniq.count
+    else
+      quantity = 1
+      puts 'Invalid quantity. Quantity = 1 will be used.'
+    end
+    top_book(quantity)
+    puts ''
+
+    puts 'User statistics: step 3/3:'
+    puts "The number of readers that take a top of #{@orders.collect(&:book).uniq.count} books;"
+    puts 'the user is counted once, without repetitions.'
+    puts 'Enter books quantity:'
+    input = gets.chomp
+    case input
+    when /\D/i
+      quantity = 1
+      puts 'Invalid quantity. Quantity = 1 will be used.'
+    when /\d/i
+      quantity = input.to_i
+      quantity = @orders.collect(&:book).uniq.count if quantity > @orders.collect(&:book).uniq.count
+    else
+      quantity = 1
+      puts 'Invalid quantity. Quantity = 1 will be used.'
+    end
+    top_set(quantity)
+    puts ''
+  end
+
   private
 
   def top_set(quantity)
@@ -55,16 +110,5 @@ class Library
     readers_names.sort_by.sort_by{|key,value| -value}.first(quantity).each do
       |name, count| puts "Reader #{name} took #{count} books."
     end
-  end
-
-  def validation_string(string)
-    return nil unless string.is_a?(String)
-    return nil if string.empty?
-    string
-  end
-
-  def validation_integer(integer)
-    return nil unless integer.is_a?(Integer)
-    integer
   end
 end
