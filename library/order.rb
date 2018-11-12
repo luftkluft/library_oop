@@ -10,7 +10,7 @@ class Order
   end
 
   def to_s
-    "Book: '#{@book.title}' by #{@book.author.name}.\n
+    "Book: '#{@book.title}' by #{@book.author}.\n
     Reader: #{@reader.name} (#{@reader.email})\n
     Order date: #{@date}."
   end
