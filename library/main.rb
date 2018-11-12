@@ -23,10 +23,3 @@ loop do
   else puts 'Invalid command (enter \'help\' to see all options).'
   end
 end
-
-    library.add_order
-  when /\Aexit\z/i
-    break
-  else puts 'Invalid command (enter \'help\' to see all options).'
-  end
-end
