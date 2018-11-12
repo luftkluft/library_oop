@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Reader
   attr_reader :name, :email, :city, :street, :house
 

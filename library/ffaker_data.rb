@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module FFakerData
   def generate_data
     authors = []
@@ -7,21 +9,21 @@ module FFakerData
 
     10.times do
       readers.push(Reader.new(
-      name: FFaker::Name.name,
-      email: FFaker::Internet.email,
-      city: FFaker::Address.city,
-      street: FFaker::Address.street_name,
-      house: FFaker::Address.building_number
-    )) 
-    
+                     name: FFaker::Name.name,
+                     email: FFaker::Internet.email,
+                     city: FFaker::Address.city,
+                     street: FFaker::Address.street_name,
+                     house: FFaker::Address.building_number
+                   ))
+
       authors.push(Author.new(
-      FFaker::Book.author,
-      FFaker::Book.description
-    )) 
+                     FFaker::Book.author,
+                     FFaker::Book.description
+                   ))
       books.push(Book.new(
-      FFaker::Book.title,
-      FFaker::Book.author
-    ))
+                   FFaker::Book.title,
+                   FFaker::Book.author
+                 ))
     end
 
     orders.push(
