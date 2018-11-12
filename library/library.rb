@@ -1,23 +1,14 @@
-require 'yaml'
-require_relative 'const'
-require_relative 'book'
-require_relative 'author'
-require_relative 'order'
-require_relative 'reader'
-require_relative 'private'
-require_relative 'public'
-
 class Library
-  attr_accessor :authors, :readers, :books, :orders
+  attr_reader :authors, :readers, :books, :orders
 
-  def initialize(books = [], orders = [], readers = [], authors = [])
-    @books = books
-    @orders = orders
-    @readers = readers
-    @authors = authors
+  begin
+    parsed = YAML.load(File.open(INDEX_PATH))
+    @books = parsed[:books]
+    @authors = parsed[:authors]
+    @readers = parsed[:readers]
+    @orders = parsed[:orders]
+    puts 'Default library loaded successfully.'
+  rescue StandardError => e
+    puts "Could not parse YAML: #{e.message}"
   end
-
-  include Public
-
-  include Private
 end
