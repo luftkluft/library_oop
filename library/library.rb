@@ -19,7 +19,11 @@ class Library
   def validation_string(string)
     return nil unless string.is_a?(String)
     return nil if string.empty?
-
     string
+  end
+
+  def validation_integer(integer)
+    return nil unless integer.is_a?(Integer)
+    integer
   end
 end
