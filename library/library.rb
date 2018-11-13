@@ -32,68 +32,23 @@ class Library
 
   def user_statistic
     puts 'User statistics: step 1/3:'
-    puts "    Enter quantity a top of #{@orders.collect(&:reader).uniq.count}
-    readers are any that takes the most number of books:"
+    puts "    Enter quantity a top of #{@orders.collect(&:reader).uniq.count} readers
+    are any that takes the most number of books:"
     input = gets.chomp
-    # connect this code if you want to stop the program when you enter an empty string
-    # check_class(input, String)
-    # check_empty_string(input)
-    case input
-    when /\D/i
-      quantity = 1
-      puts 'Invalid quantity. Quantity = 1 will be used.'
-    when /\d/i
-      quantity = input.to_i
-      quantity = @orders.map(&:reader).uniq.count if quantity > @orders.map(&:reader).uniq.count
-    else
-      quantity = 1
-      puts 'Invalid quantity. Quantity = 1 will be used.'
-    end
-    top_reader(quantity)
-    puts ''
+    user_input(:reader, input, 1){|i| top_reader(i)}
 
     puts 'User statistics: step 2/3:'
-    puts "    Enter quantity a top of #{@orders.collect(&:book).uniq.count}
-    books that was taken by readers the most times:"
+    puts "    Enter quantity a top of #{@orders.collect(&:book).uniq.count} books
+    that was taken by readers the most times:"
     input = gets.chomp
-    # connect this code if you want to stop the program when you enter an empty string
-    # check_class(input, String)
-    # check_empty_string(input)
-    case input
-    when /\D/i
-      quantity = 1
-      puts 'Invalid quantity. Quantity = 1 will be used.'
-    when /\d/i
-      quantity = input.to_i
-      quantity = @orders.map(&:book).uniq.count if quantity > @orders.map(&:book).uniq.count
-    else
-      quantity = 1
-      puts 'Invalid quantity. Quantity = 1 will be used.'
-    end
-    top_book(quantity)
-    puts ''
+    user_input(:book, input, 1){|i| top_book(i)}
 
     puts 'User statistics: step 3/3:'
     puts "The number of readers that take a top of #{@orders.collect(&:book).uniq.count} books;"
     puts 'the user is counted once, without repetitions.'
     puts 'Enter books quantity:'
     input = gets.chomp
-    # connect this code if you want to stop the program when you enter an empty string
-    # check_class(input, String)
-    # check_empty_string(input)
-    case input
-    when /\D/i
-      quantity = 3
-      puts 'Invalid quantity. Quantity = 3 will be used.'
-    when /\d/i
-      quantity = input.to_i
-      quantity = @orders.map(&:book).uniq.count if quantity > @orders.map(&:book).uniq.count
-    else
-      quantity = 3
-      puts 'Invalid quantity. Quantity = 3 will be used.'
-    end
-    top_set(quantity)
-    puts ''
+    user_input(:book, input, 3){|i| top_set(i)}
   end
 
   def help
@@ -106,6 +61,25 @@ class Library
   end
 
   private
+
+  def user_input(object_counting, input, default_quantity = 1)
+    # connect this code if you want to stop the program when you enter an empty string
+    # check_class(input, String)
+    # check_empty_string(input)
+    case input
+    when /\D/i
+      quantity = default_quantity
+      puts "Invalid quantity. Quantity = #{default_quantity} will be used."
+    when /\d/i
+      quantity = input.to_i
+      quantity = @orders.map(&object_counting).uniq.count if quantity > @orders.map(&object_counting).uniq.count
+    else
+      quantity = default_quantity
+      puts "Invalid quantity. Quantity = #{default_quantity} will be used."
+    end
+    yield(quantity)
+    puts ''
+  end
 
   def top_set(quantity)
     uniq_readers_count = @orders.group_by(&:book).sort_by { |_, order| -order.count }
