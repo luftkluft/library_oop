@@ -35,20 +35,20 @@ class Library
     puts "    Enter quantity a top of #{@orders.collect(&:reader).uniq.count} readers
     are any that takes the most number of books:"
     input = gets.chomp
-    user_input(:reader, input, 1){|i| top_reader(i)}
+    user_input(:reader, input, 1) { |i| top_reader(i) }
 
     puts 'User statistics: step 2/3:'
     puts "    Enter quantity a top of #{@orders.collect(&:book).uniq.count} books
     that was taken by readers the most times:"
     input = gets.chomp
-    user_input(:book, input, 1){|i| top_book(i)}
+    user_input(:book, input, 1) { |i| top_book(i) }
 
     puts 'User statistics: step 3/3:'
     puts "The number of readers that take a top of #{@orders.collect(&:book).uniq.count} books;"
     puts 'the user is counted once, without repetitions.'
     puts 'Enter books quantity:'
     input = gets.chomp
-    user_input(:book, input, 3){|i| top_set(i)}
+    user_input(:book, input, 3) { |i| top_set(i) }
   end
 
   def help
