@@ -4,7 +4,7 @@ class Library
   attr_reader :authors, :readers, :books, :orders
 
   def initialize(*)
-    parsed = YAML.load(File.open(INDEX_PATH))
+    parsed = YAML.load(File.open(MAIN_PATH))
     @books = parsed[:books]
     @authors = parsed[:authors]
     @readers = parsed[:readers]
