@@ -32,7 +32,7 @@ class Library
 
   def user_statistic
     puts 'User statistics: step 1/3:'
-    puts "Enter quantity a top of #{@orders.collect(&:reader).uniq.count}
+    puts "    Enter quantity a top of #{@orders.collect(&:reader).uniq.count}
     readers are any that takes the most number of books:"
     input = gets.chomp
     # connect this code if you want to stop the program when you enter an empty string
@@ -44,7 +44,7 @@ class Library
       puts 'Invalid quantity. Quantity = 1 will be used.'
     when /\d/i
       quantity = input.to_i
-      quantity = @orders.collect(&:reader).uniq.count if quantity > @orders.collect(&:reader).uniq.count
+      quantity = @orders.map(&:reader).uniq.count if quantity > @orders.map(&:reader).uniq.count
     else
       quantity = 1
       puts 'Invalid quantity. Quantity = 1 will be used.'
@@ -53,7 +53,7 @@ class Library
     puts ''
 
     puts 'User statistics: step 2/3:'
-    puts "Enter quantity a top of #{@orders.collect(&:book).uniq.count}
+    puts "    Enter quantity a top of #{@orders.collect(&:book).uniq.count}
     books that was taken by readers the most times:"
     input = gets.chomp
     # connect this code if you want to stop the program when you enter an empty string
@@ -65,7 +65,7 @@ class Library
       puts 'Invalid quantity. Quantity = 1 will be used.'
     when /\d/i
       quantity = input.to_i
-      quantity = @orders.collect(&:book).uniq.count if quantity > @orders.collect(&:book).uniq.count
+      quantity = @orders.map(&:book).uniq.count if quantity > @orders.map(&:book).uniq.count
     else
       quantity = 1
       puts 'Invalid quantity. Quantity = 1 will be used.'
@@ -87,7 +87,7 @@ class Library
       puts 'Invalid quantity. Quantity = 3 will be used.'
     when /\d/i
       quantity = input.to_i
-      quantity = @orders.collect(&:book).uniq.count if quantity > @orders.collect(&:book).uniq.count
+      quantity = @orders.map(&:book).uniq.count if quantity > @orders.map(&:book).uniq.count
     else
       quantity = 3
       puts 'Invalid quantity. Quantity = 3 will be used.'
