@@ -3,6 +3,8 @@
 class Library
   attr_reader :authors, :readers, :books, :orders
 
+  include Errors
+
   def initialize(*)
     parsed = YAML.load(File.open(MAIN_PATH))
     @books = parsed[:books]
@@ -33,6 +35,9 @@ class Library
     puts "Enter quantity a top of #{@orders.collect(&:reader).uniq.count}
     readers are any that takes the most number of books:"
     input = gets.chomp
+    # connect this code if you want to stop the program when you enter an empty string
+    # check_class(input, String)
+    # check_empty_string(input)
     case input
     when /\D/i
       quantity = 1
@@ -51,6 +56,9 @@ class Library
     puts "Enter quantity a top of #{@orders.collect(&:book).uniq.count}
     books that was taken by readers the most times:"
     input = gets.chomp
+    # connect this code if you want to stop the program when you enter an empty string
+    # check_class(input, String)
+    # check_empty_string(input)
     case input
     when /\D/i
       quantity = 1
@@ -70,6 +78,9 @@ class Library
     puts 'the user is counted once, without repetitions.'
     puts 'Enter books quantity:'
     input = gets.chomp
+    # connect this code if you want to stop the program when you enter an empty string
+    # check_class(input, String)
+    # check_empty_string(input)
     case input
     when /\D/i
       quantity = 1
@@ -121,5 +132,13 @@ class Library
     readers_names.sort_by { |_, value| -value }.first(quantity).each do |name, count|
       puts "Reader #{name} took #{count} books."
     end
+  end
+
+  def check_empty_string(str)
+    raise StringError if str.empty?
+  end
+
+  def check_class(input, klass)
+    raise ClassError unless input.is_a? klass
   end
 end

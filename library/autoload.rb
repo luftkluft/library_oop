@@ -13,6 +13,7 @@ HELP_PATH = HELP_PATH_ROUTE + HELP_PATH_NAME + HELP_PATH_FORMAT
 require 'yaml'
 require 'ffaker'
 require 'date'
+require_relative 'errors'
 require_relative 'reader'
 require_relative 'author'
 require_relative 'book'
