@@ -7,6 +7,8 @@
 * us - (user statistics)                                  *
 *      launches user statistics wizard.                   *
 *                                                         *
+* exit - exit                                             *
+*                                                         *
 * If the first time there is no database of the library,  *
 * then the default database will be loaded.               *
 *                                                         *
