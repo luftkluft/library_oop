@@ -83,14 +83,14 @@ class Library
     # check_empty_string(input)
     case input
     when /\D/i
-      quantity = 1
-      puts 'Invalid quantity. Quantity = 1 will be used.'
+      quantity = 3
+      puts 'Invalid quantity. Quantity = 3 will be used.'
     when /\d/i
       quantity = input.to_i
       quantity = @orders.collect(&:book).uniq.count if quantity > @orders.collect(&:book).uniq.count
     else
-      quantity = 1
-      puts 'Invalid quantity. Quantity = 1 will be used.'
+      quantity = 3
+      puts 'Invalid quantity. Quantity = 3 will be used.'
     end
     top_set(quantity)
     puts ''
@@ -109,8 +109,8 @@ class Library
 
   def top_set(quantity)
     uniq_readers_count = @orders.group_by(&:book).sort_by { |_, order| -order.count }
-                                .first(quantity).collect { |_, order| order }
-                                .flatten.collect(&:reader).uniq.count
+                                .first(quantity).map { |_, order| order }
+                                .flatten.map(&:reader).uniq.count
     puts "The topset of #{quantity} books read by #{uniq_readers_count} readers."
   end
 
