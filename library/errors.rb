@@ -1,15 +1,21 @@
 # frozen_string_literal: true
 
 module Errors
-  class ClassError < StandardError
+  class WrongClassError < StandardError
     def initialize
-      super('Сlass mismatch!')
+      super('Wrong class!')
     end
   end
 
-  class StringError < StandardError
+  class EmptyStringError < StandardError
     def initialize
-      super('It is empty string!')
+      super('You try to send empty string!')
+    end
+  end
+
+  class UndefinedLibraryEntity < StandardError
+    def initialize
+      super('Library accepts only Book, Author, Order, Reader classes!')
     end
   end
 end
