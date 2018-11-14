@@ -28,14 +28,14 @@ unless File.size?(MAIN_PATH)
   10.times do
     books.push(Book.new(
                  FFaker::Book.title.to_s,
-                 FFaker::Book.author.to_s
+                 Author.new(FFaker::Book.author.to_s)
                ))
   end
 
   10.times do
     orders.push(Order.new(Book.new(
                             FFaker::Book.title.to_s,
-                            FFaker::Book.author.to_s
+                            Author.new(FFaker::Book.author.to_s)
                           ),
                           Reader.new(
                             name: FFaker::Name.name.to_s,

@@ -11,8 +11,8 @@ class Book
   end
 
   def validate(title, author)
-    check_class(author, String)
     check_class(title, String)
+    check_class(author, Author)
     check_for_emptiness(title)
   end
 end
