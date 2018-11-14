@@ -2,13 +2,17 @@
 
 class Book
   attr_reader :title, :author
+  include Validator
 
   def initialize(title, author)
+    validate(title, author)
     @title = title
     @author = author
   end
 
-  def to_s
-    "Author: #{@author}.\nTitle: #{@title}."
+  def validate(title, author)
+    check_class(title, String)
+    check_class(author, Author)
+    check_for_emptiness(title)
   end
 end
