@@ -1,0 +1,254 @@
+---
+- - !ruby/object:Book
+    title: Day of the Electric Fly
+    author: Merle Rodriguez
+  - !ruby/object:Book
+    title: Planet of the Nuclear Beast
+    author: Dion Senger
+  - !ruby/object:Book
+    title: Day of the Dangerous Wizard
+    author: Susy Carroll
+  - !ruby/object:Book
+    title: Bloody Wolves
+    author: Denny Harvey
+  - !ruby/object:Book
+    title: Hungry Rain
+    author: Shamika Crist
+  - !ruby/object:Book
+    title: A Fistful of Fake Woman
+    author: Arturo Harber
+  - !ruby/object:Book
+    title: Legend of Flying Blow
+    author: Sonja Mayert
+  - !ruby/object:Book
+    title: Tokyo Dreams
+    author: Renita Streich
+  - !ruby/object:Book
+    title: Blonde Rain
+    author: Jonna Block
+  - !ruby/object:Book
+    title: Ultra Fly
+    author: Marty Mohr
+- - !ruby/object:Author
+    name: Nerissa Boyle
+    biography: Repellat soluta in laudantium enim tenetur non et. Praesentium sed
+      rerum perspiciatis veritatis assumenda. Aut accusamus incidunt officiis debitis
+      atque vero veritatis. Aut recusandae minima voluptas est. Exercitationem perferendis
+      possimus provident facere optio laudantium.
+  - !ruby/object:Author
+    name: Karen Koelpin
+    biography: Sit accusantium dignissimos recusandae quasi ut libero consequatur
+      et. Et reiciendis quaerat suscipit culpa labore dolores aut qui. Qui accusantium
+      magnam aut maxime ex ut et.
+  - !ruby/object:Author
+    name: Florence Medhurst
+    biography: Et quia voluptatum consequatur tempore dolor quod eveniet et. Quidem
+      similique et est veniam quae voluptas qui. Quia itaque consectetur non repellat
+      modi doloribus et rem. Autem cupiditate dolor eveniet consequuntur sunt optio
+      qui.
+  - !ruby/object:Author
+    name: Scott Will
+    biography: Corporis veniam minus dolorum vel eos. Ea aut mollitia exercitationem
+      sunt. Architecto aut iusto autem repellat. Quia rerum voluptatibus voluptas
+      sint minus qui suscipit. Est dolores ea vel odio rerum ipsam quisquam.
+  - !ruby/object:Author
+    name: Keesha Considine
+    biography: Suscipit nisi repellendus aut quos ut eum nesciunt. Aliquid ad ut eveniet
+      sint corporis. Totam accusamus impedit aut at harum velit quod. Qui dolores
+      et architecto dolorem tenetur eaque optio.
+  - !ruby/object:Author
+    name: Erna Wolff
+    biography: Mollitia vero et et incidunt illo. Modi laborum rerum repellendus quidem.
+      Nam dolor doloribus et quisquam modi. Doloribus et dolore iste possimus. Ut
+      molestias nesciunt aut ut tenetur quo.
+  - !ruby/object:Author
+    name: Emelia Cole
+    biography: Quidem est repellat aut ratione et et sit. Suscipit est culpa similique
+      nulla ea. Rerum voluptate voluptas praesentium recusandae necessitatibus. Enim
+      aut sunt sequi est et dolor.
+  - !ruby/object:Author
+    name: Chere Howe
+    biography: Voluptate non error atque et fugit. Nam et sed amet iste quod. Possimus
+      ut voluptas dolorum aperiam et nobis laborum. Dolores tenetur laboriosam aut
+      qui facilis. Assumenda aliquid dolore voluptatum debitis ea quidem.
+  - !ruby/object:Author
+    name: Amalia Pollich
+    biography: Aut nulla iusto nihil quasi harum. Incidunt error adipisci placeat
+      pariatur totam voluptate. Delectus sit consequatur perspiciatis id non asperiores
+      dolor in. Deserunt a voluptatem voluptatem suscipit autem iure ea inventore.
+      Nihil et delectus ea sunt ut aliquid esse.
+  - !ruby/object:Author
+    name: Sondra Cormier
+    biography: Iure voluptas eos itaque occaecati eaque sit atque. Nesciunt velit
+      officia laboriosam qui. Velit non et rerum cupiditate magni qui aspernatur.
+      Ut illo tenetur earum deleniti ea.
+- - !ruby/object:Reader
+    name: Sanora Murazik
+    email: minna@grady.com
+    city: Willview
+    street: Ciara Walks
+    house: 31190
+  - !ruby/object:Reader
+    name: Emmy Jenkins
+    email: shaneka@bechtelarcummings.biz
+    city: Brandyborough
+    street: Brown Branch
+    house: 17
+  - !ruby/object:Reader
+    name: Bulah Metz
+    email: enid.barrows@klein.info
+    city: South Alicaville
+    street: Bechtelar Crossroad
+    house: 89023
+  - !ruby/object:Reader
+    name: Krysten Weissnat
+    email: brunilda.brown@bosco.com
+    city: Sporerbury
+    street: Mraz Coves
+    house: 972
+  - !ruby/object:Reader
+    name: Dan Bechtelar
+    email: sueann_towne@walsh.ca
+    city: Freddymouth
+    street: Bessie Street
+    house: 132
+  - !ruby/object:Reader
+    name: Terri Koepp
+    email: korey_okon@jastmcdermott.biz
+    city: Quitzonhaven
+    street: Patrick Island
+    house: 7364
+  - !ruby/object:Reader
+    name: Lydia Glover
+    email: dorcas.lindgren@yost.biz
+    city: Elbaburgh
+    street: Alix Shoals
+    house: 96100
+  - !ruby/object:Reader
+    name: Lorie Padberg
+    email: cora.bergstrom@carroll.info
+    city: Rosalvaside
+    street: Deane Forges
+    house: 9132
+  - !ruby/object:Reader
+    name: Anibal Hane
+    email: christi.oberbrunner@lindgrenmccullough.com
+    city: Hilllborough
+    street: Dooley Field
+    house: 24927
+  - !ruby/object:Reader
+    name: Val Rosenbaum
+    email: rebbeca.hermiston@raynor.ca
+    city: Port Jackie
+    street: Murphy Plain
+    house: 9355
+- - !ruby/object:Order
+    book: !ruby/object:Book
+      title: Fake World
+      author: Jonna Abbott
+    reader: !ruby/object:Reader
+      name: Rashida Hegmann
+      email: ina_ernser@kuvalis.com
+      city: Lake Junestad
+      street: Robel Creek
+      house: 78920
+    date: 2018-11-14
+  - !ruby/object:Order
+    book: !ruby/object:Book
+      title: Danger Pickpocket
+      author: Millie Mosciski
+    reader: !ruby/object:Reader
+      name: Evelia Mueller
+      email: sidney_jaskolski@crona.info
+      city: Mayertshire
+      street: Marlena Orchard
+      house: 9063
+    date: 2018-11-14
+  - !ruby/object:Order
+    book: !ruby/object:Book
+      title: I Married a Tokyo Friday
+      author: Allen Weimann
+    reader: !ruby/object:Reader
+      name: Katherina Jakubowski
+      email: kent.mayer@gibson.co.uk
+      city: Antoninaland
+      street: Ronda Spur
+      house: 25435
+    date: 2018-11-14
+  - !ruby/object:Order
+    book: !ruby/object:Book
+      title: 'Codename: Dangerous Tears'
+      author: Mireya Volkman
+    reader: !ruby/object:Reader
+      name: Melanie Smitham
+      email: rebbeca@williamson.name
+      city: Keelingstad
+      street: Shanti Corner
+      house: 84675
+    date: 2018-11-14
+  - !ruby/object:Order
+    book: !ruby/object:Book
+      title: Hungry Tears
+      author: Nora Greenfelder
+    reader: !ruby/object:Reader
+      name: Kyong Borer
+      email: arturo_douglas@schinner.name
+      city: Lake Mechelle
+      street: Kulas Ranch
+      house: 19872
+    date: 2018-11-14
+  - !ruby/object:Order
+    book: !ruby/object:Book
+      title: Nuclear Man
+      author: Alecia Kilback
+    reader: !ruby/object:Reader
+      name: Felice Wilderman
+      email: julieta@lynch.name
+      city: New Jerrellport
+      street: Hegmann Points
+      house: 98262
+    date: 2018-11-14
+  - !ruby/object:Order
+    book: !ruby/object:Book
+      title: Invasion of the Action Rain
+      author: Dolores Cormier
+    reader: !ruby/object:Reader
+      name: Carlee Lehner
+      email: asia@friesenstark.name
+      city: Lake Kitty
+      street: Noble Meadow
+      house: 786
+    date: 2018-11-14
+  - !ruby/object:Order
+    book: !ruby/object:Book
+      title: Return of the Nuclear Dreams
+      author: Nila Smitham
+    reader: !ruby/object:Reader
+      name: Jamila Mills
+      email: jeanetta@upton.name
+      city: West Warren
+      street: Patricia Ways
+      house: 287
+    date: 2018-11-14
+  - !ruby/object:Order
+    book: !ruby/object:Book
+      title: I am Red Diaries
+      author: Janie Greenholt
+    reader: !ruby/object:Reader
+      name: Dion Ortiz
+      email: walter.rutherford@hagenesweissnat.co.uk
+      city: Lowechester
+      street: Gleichner Parkway
+      house: 812
+    date: 2018-11-14
+  - !ruby/object:Order
+    book: !ruby/object:Book
+      title: 'Codename: Death Brains'
+      author: Jerald Torp
+    reader: !ruby/object:Reader
+      name: Clair Pfannerstill
+      email: antone@kirlinkassulke.ca
+      city: New Caritaburgh
+      street: Moore Fields
+      house: 48911
+    date: 2018-11-14

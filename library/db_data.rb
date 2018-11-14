@@ -2,9 +2,7 @@
 
 library = Library.new
 
-if File.size?(MAIN_PATH)
-  library.load_db
-else
+unless File.size?(MAIN_PATH)
   authors = []
   readers = []
   books = []
@@ -12,48 +10,43 @@ else
 
   10.times do
     readers.push(Reader.new(
-    name: FFaker::Name.name,
-    email: FFaker::Internet.email,
-    city: FFaker::Address.city,
-    street: FFaker::Address.street_name,
-    house: FFaker::Address.building_number
-    )
-    )
+                   name: FFaker::Name.name.to_s,
+                   email: FFaker::Internet.email.to_s,
+                   city: FFaker::Address.city.to_s,
+                   street: FFaker::Address.street_name.to_s,
+                   house: FFaker::Address.building_number.to_i
+                 ))
   end
 
   10.times do
     authors.push(Author.new(
-    FFaker::Book.author,
-    FFaker::Book.description
-    )
-    )
+                   FFaker::Book.author.to_s,
+                   FFaker::Book.description.to_s
+                 ))
   end
 
   10.times do
     books.push(Book.new(
-    FFaker::Book.title,
-    FFaker::Book.author
-    )
-    )
+                 FFaker::Book.title.to_s,
+                 FFaker::Book.author.to_s
+               ))
   end
 
   10.times do
-    orders.push(Order.new(
-      books[ FFaker::Random.rand(0..9)],
-      readers[ FFaker::Random.rand(0..9)]
-    )
-    )
+    orders.push(Order.new(Book.new(
+                            FFaker::Book.title.to_s,
+                            FFaker::Book.author.to_s
+                          ),
+                          Reader.new(
+                            name: FFaker::Name.name.to_s,
+                            email: FFaker::Internet.email.to_s,
+                            city: FFaker::Address.city.to_s,
+                            street: FFaker::Address.street_name.to_s,
+                            house: FFaker::Address.building_number.to_i
+                          )))
   end
 
-  lib = {
-    readers: readers,
-    authors: authors,
-    books: books,
-    orders: orders
-  }
-
-  library.save_to_db(book: lib.books, author: lib.authors,
-                     reader: lib.readers, order: lib.orders)
-
-  library.load_db
+  library.save_to_db(book: books, author: authors, reader: readers, order: orders)
+  library.init
 end
+library.load_db

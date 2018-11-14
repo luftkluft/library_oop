@@ -11,6 +11,9 @@ class Library
     @readers = []
     @authors = []
     @orders = []
+  end
+
+  def init
     load_db.flatten.each { |entity| add(entity) }
   end
 
