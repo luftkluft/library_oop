@@ -2,16 +2,18 @@
 
 class Order
   attr_reader :book, :reader, :date
+  include Validator
 
   def initialize(book, reader, date = Date.today)
+    validate(book, reader, date)
     @book = book
     @reader = reader
     @date = date
   end
 
-  def to_s
-    "Book: '#{@book.title}' by #{@book.author}.\n
-    Reader: #{@reader.name} (#{@reader.email})\n
-    Order date: #{@date}."
+  def validate(book, reader, date)
+    check_class(book, Book)
+    check_class(reader, Reader)
+    check_class(date, Date)
   end
 end
