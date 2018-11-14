@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative 'autoload'
-
 library = Library.new
 
 if File.size?(MAIN_PATH)
