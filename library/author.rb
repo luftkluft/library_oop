@@ -10,6 +10,8 @@ class Author
     @biography = biography
   end
 
+  private
+  
   def validate(name, biography)
     check_class(name, String)
     check_class(biography, String)
