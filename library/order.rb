@@ -11,6 +11,8 @@ class Order
     @date = date
   end
 
+  private
+  
   def validate(book, reader, date)
     check_class(book, Book)
     check_class(reader, Reader)
