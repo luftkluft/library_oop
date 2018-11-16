@@ -46,7 +46,7 @@ unless File.size?(MAIN_PATH)
                           )))
   end
 
-  library.save_to_db(book: books, author: authors, reader: readers, order: orders)
+  library.save_to_db(books: books, authors: authors, readers: readers, orders: orders)
   library.init
 end
 library.load_db

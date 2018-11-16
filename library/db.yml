@@ -1,291 +1,286 @@
 ---
 - - !ruby/object:Book
-    title: Nuclear Mutant
+    title: 'Codename: Action Pickpocket'
     author: !ruby/object:Author
-      name: Jeniffer Pfeffer
+      name: Reyna Muller
       biography: ''
   - !ruby/object:Book
-    title: Time of the Action Identity
+    title: Time of the Dangerous Cousins
     author: !ruby/object:Author
-      name: Jean Boehm
+      name: Bev Emard
       biography: ''
   - !ruby/object:Book
-    title: Killer Beast
+    title: Case of the Missing Electric City
     author: !ruby/object:Author
-      name: Thresa Grant
+      name: Basil Borer
       biography: ''
   - !ruby/object:Book
-    title: War of the Red Beast
+    title: Electric Rain
     author: !ruby/object:Author
-      name: Cari Torphy
+      name: Gabriel Hodkiewicz
       biography: ''
   - !ruby/object:Book
-    title: Hungry Identity
+    title: Rise of the Flying City
     author: !ruby/object:Author
-      name: Page Luettgen
+      name: Arron VonRueden
       biography: ''
   - !ruby/object:Book
-    title: Death Fly
+    title: Curse of the Champagne Pickpocket
     author: !ruby/object:Author
-      name: Kasey Gutmann
+      name: Asuncion Oberbrunner
       biography: ''
   - !ruby/object:Book
-    title: Champagne Diaries
+    title: Season of the Champagne Ninjas
     author: !ruby/object:Author
-      name: Rozanne Kuvalis
+      name: Youlanda Hickle
       biography: ''
   - !ruby/object:Book
-    title: Blonde City
+    title: I Married a Electric Wolf
     author: !ruby/object:Author
-      name: Matt Auer
+      name: Mildred Osinski
       biography: ''
   - !ruby/object:Book
-    title: Flying Rain
+    title: Green Gypsy
     author: !ruby/object:Author
-      name: Maye Schulist
+      name: Shera Jones
       biography: ''
   - !ruby/object:Book
-    title: Electric Dreams
+    title: Planet of the Dangerous Cat
     author: !ruby/object:Author
-      name: Jackelyn Hoppe
+      name: Rubie Adams
       biography: ''
 - - !ruby/object:Author
-    name: Audrie Runolfsson
-    biography: Dolorem modi quod itaque voluptates expedita minus esse et. Quia quidem
-      dolores dignissimos sed voluptates. Repellat nihil vel temporibus ut necessitatibus
-      autem ut animi. Et officiis vero id beatae enim qui distinctio.
+    name: Tiara Harvey
+    biography: Et quia incidunt non suscipit adipisci dolores perspiciatis qui. Aspernatur
+      in ut facilis quia repellendus quos esse cupiditate. Nisi voluptatibus earum
+      alias officia vel.
   - !ruby/object:Author
-    name: Kasha Crona
-    biography: Et possimus quia sunt sed dolor. Possimus molestias tempore minus impedit
-      autem. Beatae assumenda ab dolorem error quo in rerum. Ipsa saepe molestias
-      tempore numquam deserunt id quisquam.
+    name: Leighann Daniel
+    biography: Rerum fuga illo adipisci similique nihil quibusdam. Provident et aut
+      veniam et. Tenetur aut eos ipsam commodi totam.
   - !ruby/object:Author
-    name: Donte Kutch
-    biography: Temporibus fugit reiciendis aperiam iusto commodi. Officiis quia alias
-      laudantium voluptas ut laborum itaque. Quibusdam autem sunt delectus consequatur
-      recusandae voluptatem autem tenetur.
+    name: Shaun Cassin
+    biography: Dolore enim debitis pariatur commodi. Fuga rem vel odio cupiditate.
+      Natus hic est beatae nihil. Sed et rerum accusantium voluptatem enim voluptas.
   - !ruby/object:Author
-    name: Chieko Monahan
-    biography: Voluptatum et eaque sunt quia dolore qui rerum ipsam. Incidunt dicta
-      et quia sit ipsa laboriosam facere. Et ut adipisci rerum et architecto ex omnis.
+    name: Lanette Hayes
+    biography: Perspiciatis sapiente omnis ipsa voluptas. Nemo autem non officiis
+      itaque voluptatem quos. Quia autem quis corrupti placeat laboriosam quidem nam.
+      Quaerat ipsa ut odio distinctio atque.
   - !ruby/object:Author
-    name: Nam Smith
-    biography: Delectus rem eligendi itaque dolor impedit. Repellat qui est occaecati
-      corrupti. Et iste enim tempora cupiditate labore. Vero et et impedit optio nemo.
-      Qui ea quis assumenda mollitia.
+    name: Tawanna Baumbach
+    biography: Animi modi earum optio eius expedita. Mollitia corporis doloribus sint
+      in sed totam consectetur. Sit dolor et at repudiandae. Et tempora neque illo
+      aut error minima eum voluptas.
   - !ruby/object:Author
-    name: Mavis Reynolds
-    biography: Quia eveniet in provident numquam molestiae quaerat. Consequatur autem
-      in expedita deserunt. Vel nihil est totam eos rerum illum. Aut quo voluptates
-      sed dignissimos quam.
+    name: Farrah Lang
+    biography: Adipisci a neque quo eos. Quo laudantium iusto ducimus ut ut voluptatem
+      consequatur sint. Dolorum asperiores deserunt consequatur labore vel sapiente
+      dicta minima.
   - !ruby/object:Author
-    name: Cecil Hayes
-    biography: Quidem fugiat consequatur perferendis a ut dolores id. Qui fugit necessitatibus
-      quia temporibus. Qui cum quis nihil ut unde. Quos quia consectetur quis non
-      quo voluptatem porro voluptas. Natus possimus voluptates quo inventore quod
-      sint harum.
+    name: Alex Hahn
+    biography: Ab ex debitis ipsam aut. Quod odio in sunt exercitationem fuga. Est
+      harum eius temporibus repellendus fugiat voluptatum tenetur illum.
   - !ruby/object:Author
-    name: Librada Romaguera
-    biography: In est repellat quos facilis voluptas ipsum occaecati. Voluptatem amet
-      dolorem nisi enim adipisci repudiandae alias mollitia. Quaerat sunt voluptas
-      veritatis ut consequatur officia nisi. Autem est qui sapiente consequatur error
-      et quis. Sint exercitationem ipsum ex porro quibusdam dolores nemo magni.
+    name: Lloyd Beahan
+    biography: Veniam aut suscipit ipsum quam rem tempora et. Quibusdam est officiis
+      dolor quia similique. Odio minima possimus id nostrum et velit. Repellat qui
+      qui eius ut eum iure velit.
   - !ruby/object:Author
-    name: Hedy McGlynn
-    biography: Officiis alias officia consequatur mollitia nemo molestias non. Aperiam
-      aut nobis cum non autem libero sed ut. Rerum sit minus qui quia est. Sapiente
-      neque assumenda placeat asperiores ut.
+    name: Daryl Lowe
+    biography: Consequuntur ut est dolores quia commodi nobis. Molestias voluptatem
+      quos aperiam sapiente ut rerum voluptatibus. Labore dolores optio aut cumque.
   - !ruby/object:Author
-    name: Roxane Heller
-    biography: Dolore doloribus quas ipsum rerum. Cum est quod qui quos atque. Quia
-      qui maiores rem quia. Cupiditate neque suscipit veritatis earum quam perferendis.
+    name: Jeremy Becker
+    biography: Asperiores ea architecto rerum veritatis ut nihil sed qui. Deleniti
+      est eos sunt expedita qui et quia. Ducimus nulla numquam inventore ut sunt.
 - - !ruby/object:Reader
-    name: Josiah Steuber
-    email: soila@goodwin.co.uk
-    city: Corkeryside
-    street: Ida Dale
-    house: 6748
+    name: Sang D'Amore
+    email: verlie_christiansen@harriskovacek.info
+    city: Port Tawna
+    street: Waters Turnpike
+    house: 34395
   - !ruby/object:Reader
-    name: Genaro Hodkiewicz
-    email: olympia_graham@keebler.com
-    city: Lynchville
-    street: Schaden Island
-    house: 201
+    name: Calista Cruickshank
+    email: deane@hermiston.name
+    city: Annamaemouth
+    street: Kiehn Meadow
+    house: 6578
   - !ruby/object:Reader
-    name: Sherika Abshire
-    email: tegan_satterfield@mckenzietillman.co.uk
-    city: East Ramona
-    street: Glenda Haven
-    house: 485
+    name: Rosalba Smith
+    email: jacqulyn_king@loweauer.co.uk
+    city: North Lindsey
+    street: Justin Corners
+    house: 74
   - !ruby/object:Reader
-    name: Stacy Monahan
-    email: violette_bogan@bosco.us
-    city: Charlesmouth
-    street: Florence Route
-    house: 610
+    name: Verna Prosacco
+    email: lance_schiller@hudson.us
+    city: South Randalberg
+    street: Wisoky Point
+    house: 91374
   - !ruby/object:Reader
-    name: In Nicolas
-    email: renae@grady.info
-    city: Bernieport
-    street: Spencer Via
-    house: 788
+    name: Dori Rolfson
+    email: vernell@kilbackschimmel.ca
+    city: Rozellafurt
+    street: Philip Islands
+    house: 807
   - !ruby/object:Reader
-    name: Lupe Weimann
-    email: jaqueline.gusikowski@stiedemanncasper.co.uk
-    city: New Elvira
-    street: Ferdinand Lane
-    house: 437
+    name: Kandra Ebert
+    email: annabell_shields@kutch.info
+    city: Pfefferville
+    street: Stiedemann Trafficway
+    house: 942
   - !ruby/object:Reader
-    name: Vernice Gottlieb
-    email: chrystal@welch.us
-    city: Reychester
-    street: Gerlach Neck
-    house: 96800
+    name: Tressa Nader
+    email: kaylene.bednar@maggio.com
+    city: South Cris
+    street: Franecki Trail
+    house: 2182
   - !ruby/object:Reader
-    name: Laquita Miller
-    email: reba.macejkovic@wymanhills.info
-    city: Port Caterina
-    street: Danielle Ford
-    house: 88422
+    name: Billi Schiller
+    email: marshall.thiel@vonruedenbeier.name
+    city: West Jamiville
+    street: Helaine Orchard
+    house: 55096
   - !ruby/object:Reader
-    name: Vanna Rogahn
-    email: tarah.anderson@gleichnerkeebler.name
-    city: Lubowitzmouth
-    street: Monahan Causeway
-    house: 77590
+    name: Amparo Hyatt
+    email: jamar@reingerdoyle.co.uk
+    city: Lake Shaniqua
+    street: Velvet Crossroad
+    house: 8107
   - !ruby/object:Reader
-    name: Calvin Rippin
-    email: lucile.oreilly@leschhammes.us
-    city: Port Springport
-    street: Harris Shoals
-    house: 63809
+    name: Doretha Brekke
+    email: petrina@runolfsdottircummerata.ca
+    city: Templemouth
+    street: Windler Forks
+    house: 165
 - - !ruby/object:Order
     book: !ruby/object:Book
-      title: Dangerous Demon
+      title: A Fistful of Nuclear Diaries
       author: !ruby/object:Author
-        name: Velda Jewess
+        name: Melonie McDermott
         biography: ''
     reader: !ruby/object:Reader
-      name: Lana Pfeffer
-      email: juli@runtegaylord.name
-      city: Jewellhaven
-      street: Latasha Crossing
-      house: 814
-    date: 2018-11-14
+      name: Santos Kerluke
+      email: raymon@veum.info
+      city: West Linwoodside
+      street: Yuette Parkway
+      house: 997
+    date: 2018-11-16
   - !ruby/object:Order
     book: !ruby/object:Book
-      title: Danger Fly
+      title: Fake Women
       author: !ruby/object:Author
-        name: Dannie Watsica
+        name: Charmain Beahan
         biography: ''
     reader: !ruby/object:Reader
-      name: Sheena Considine
-      email: melodee@vonrueden.name
-      city: West Cris
-      street: Marisha Gardens
-      house: 305
-    date: 2018-11-14
+      name: Britany Macejkovic
+      email: brandi@hand.biz
+      city: Chelseatown
+      street: Yvone Cliffs
+      house: 14683
+    date: 2018-11-16
   - !ruby/object:Order
     book: !ruby/object:Book
-      title: Hungry World
+      title: I am American Dreams
       author: !ruby/object:Author
-        name: Florencio Hauck
+        name: Karin Jaskolski
         biography: ''
     reader: !ruby/object:Reader
-      name: Johnnie Hamill
-      email: tristan@russeljast.ca
-      city: Mannport
-      street: Lawana Harbor
-      house: 76492
-    date: 2018-11-14
+      name: Rhea Rempel
+      email: dennise_gibson@medhurstmante.biz
+      city: Wolfburgh
+      street: Hegmann Burg
+      house: 1
+    date: 2018-11-16
   - !ruby/object:Order
     book: !ruby/object:Book
-      title: Day of the Nuclear Wolf
+      title: Journey of the Blonde Demon
       author: !ruby/object:Author
-        name: Ann Ward
+        name: Shay Wilderman
         biography: ''
     reader: !ruby/object:Reader
-      name: Jeffie Block
-      email: colette_murazik@bradtke.us
-      city: Port Johnsie
-      street: Willms Well
-      house: 8895
-    date: 2018-11-14
+      name: Harley Rath
+      email: damion@schmidthoppe.info
+      city: East Flaviamouth
+      street: Sonja Isle
+      house: 916
+    date: 2018-11-16
   - !ruby/object:Order
     book: !ruby/object:Book
-      title: War of the Fake Men
+      title: Case of the Missing Killer Mutant
       author: !ruby/object:Author
-        name: Mamie Bauch
+        name: Marian Howe
         biography: ''
     reader: !ruby/object:Reader
-      name: Alma Terry
-      email: wanetta.huel@lockmanflatley.ca
-      city: Lockmanchester
-      street: Brad Drives
-      house: 6588
-    date: 2018-11-14
+      name: Migdalia Bednar
+      email: heidi@schultz.biz
+      city: Port Jeannemouth
+      street: Wunsch Glen
+      house: 829
+    date: 2018-11-16
   - !ruby/object:Order
     book: !ruby/object:Book
-      title: Blue Wolf
+      title: Time of the Champagne Hills
       author: !ruby/object:Author
-        name: Miranda Lockman
+        name: Aubrey Torphy
         biography: ''
     reader: !ruby/object:Reader
-      name: Lettie Beier
-      email: bee@adams.com
-      city: Durganville
-      street: Frankie Gardens
-      house: 888
-    date: 2018-11-14
+      name: Leeann Miller
+      email: edyth@langosh.co.uk
+      city: Collinstown
+      street: Ryan Knolls
+      house: 746
+    date: 2018-11-16
   - !ruby/object:Order
     book: !ruby/object:Book
-      title: Fake Wizard
+      title: Green Diaries
       author: !ruby/object:Author
-        name: Takisha Becker
+        name: Machelle Conroy
         biography: ''
     reader: !ruby/object:Reader
-      name: Patsy Kohler
-      email: jammie.kohler@zboncak.name
-      city: North Wilhelmina
-      street: Tammy Corner
-      house: 3971
-    date: 2018-11-14
+      name: Moira Brakus
+      email: ria@runolfsdottir.ca
+      city: New Racquel
+      street: Hane Trafficway
+      house: 3788
+    date: 2018-11-16
   - !ruby/object:Order
     book: !ruby/object:Book
-      title: Time of the Nuclear Ninja
+      title: Action City
       author: !ruby/object:Author
-        name: Pricilla Reichert
+        name: Tommy Powlowski
         biography: ''
     reader: !ruby/object:Reader
-      name: Jeannetta Greenfelder
-      email: phoebe@homenick.biz
-      city: South Brittaside
-      street: Inga Canyon
-      house: 12156
-    date: 2018-11-14
+      name: Jamaal Dare
+      email: kimiko.schimmel@robel.com
+      city: Lake Twila
+      street: Brain Cliff
+      house: 35943
+    date: 2018-11-16
   - !ruby/object:Order
     book: !ruby/object:Book
-      title: Flying Tentacle
+      title: Death Ninjas
       author: !ruby/object:Author
-        name: Mona Parker
+        name: Andres Johns
         biography: ''
     reader: !ruby/object:Reader
-      name: Muriel Lueilwitz
-      email: delcie@hagenesgleason.name
-      city: Port Royal
-      street: Murazik Mount
-      house: 22871
-    date: 2018-11-14
+      name: Criselda Stoltenberg
+      email: edythe.leuschke@pagac.us
+      city: Hyoview
+      street: Kimberli Junction
+      house: 3918
+    date: 2018-11-16
   - !ruby/object:Order
     book: !ruby/object:Book
-      title: Flying Women
+      title: Dangerous Wolves
       author: !ruby/object:Author
-        name: Laurence Rowe
+        name: Booker Murray
         biography: ''
     reader: !ruby/object:Reader
-      name: Freeda Murazik
-      email: bridget.heidenreich@gutkowski.us
-      city: Marnitown
-      street: Mosciski Mountains
-      house: 6045
-    date: 2018-11-14
+      name: Saturnina Bergstrom
+      email: love.muller@beier.com
+      city: Runolfssonville
+      street: Waters Spring
+      house: 82923
+    date: 2018-11-16
