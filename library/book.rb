@@ -10,6 +10,8 @@ class Book
     @author = author
   end
 
+  private
+
   def validate(title, author)
     check_class(title, String)
     check_class(author, Author)

@@ -13,6 +13,8 @@ class Reader
     @house = house
   end
 
+  private
+
   def validate(name, email, city, street, house)
     [name, email, city, street].each do |personal_data|
       check_class(personal_data, String)
