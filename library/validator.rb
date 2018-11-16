@@ -3,8 +3,8 @@
 module Validator
   include Errors
 
-  def check_for_emptiness(str)
-    raise EmptyStringError if str.empty?
+  def check_for_emptiness(string)
+    raise EmptyStringError if string.empty?
   end
 
   def check_class(entity, klass)
